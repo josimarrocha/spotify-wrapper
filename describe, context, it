@@ -1,0 +1,26 @@
+
+describe = descreve um teste. 
+- Ele cria um bloco onde vamos testar uma determinada classe/arquivo
+- pode ter varios describes internos (que são os metodos da classe)
+
+context = serve para testar casos diferentes de um mesmo metodo
+
+
+describe('Main', function(){
+  describe('metodo A', function(){
+
+    context('case 1', function(){
+      it('should happen ...', () => {
+        // espera que aconteca
+        // entrada de dados/metodos sum(2, 2)
+        // espera retornar (4)
+      })
+    })
+
+  })
+
+  describe('metodo B', function(){
+
+  })
+
+})

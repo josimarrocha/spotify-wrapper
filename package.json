@@ -1,0 +1,52 @@
+{
+  "name": "spotify-wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper to work with the Spotify Web API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josimarrocha/spotify-wrapper.git"
+  },
+  "keywords": [
+    "js.",
+    "tdd",
+    "library"
+  ],
+  "author": "Josimar Rocha <rocha_josimar@yahoo.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josimarrocha/js-tdd-curso/issues"
+  },
+  "homepage": "https://github.com/josimarrocha/js-tdd-curso#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "husky": "^2.2.0",
+    "nyc": "^14.1.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}
