@@ -11,8 +11,10 @@ module.exports = {
   },
   globals: {
     "describe": "writable",
-    "it": "writable"
-
+    "it": "writable",
+    "beforeEach": "writable",
+    "afterEach": "writable",
+    "context": "writable"
   }
 
 };

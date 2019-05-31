@@ -2,7 +2,7 @@
   "name": "spotify-wrapper",
   "version": "1.0.0",
   "description": "A wrapper to work with the Spotify Web API",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
@@ -11,9 +11,6 @@
     "test:coverage": "nyc npm test"
   },
   "nyc": {
-    "functions": 80,
-    "lines": 80,
-    "check-coverage": true,
     "reporter": [
       "text",
       "html"
@@ -43,7 +40,11 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",
     "husky": "^2.2.0",
-    "nyc": "^14.1.1"
+    "node-fetch": "^2.6.0",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "sinon-stub-promise": "^4.0.0"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
