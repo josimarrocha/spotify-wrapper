@@ -4,6 +4,11 @@
   "description": "A wrapper to work with the Spotify Web API",
   "main": "src/index.js",
   "scripts": {
+    "clear": "rimraf lib",
+    "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
+    "build:umd": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.js",
+    "build:all": "npm run build && npm run build:umd",
     "lint": "node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
@@ -35,6 +40,8 @@
   },
   "homepage": "https://github.com/josimarrocha/js-tdd-curso#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -42,11 +49,15 @@
     "husky": "^2.2.0",
     "node-fetch": "^2.6.0",
     "nyc": "^14.1.1",
+    "rimraf": "^2.6.3",
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0",
-    "sinon-stub-promise": "^4.0.0"
+    "sinon-stub-promise": "^4.0.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0"
   }
