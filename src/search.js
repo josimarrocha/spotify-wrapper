@@ -6,7 +6,7 @@ export const search = (query, type) =>
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      Authorization: 'Bearer BQAlEqwhON_mkHB7-bq-JM74d9nKvS87ZfLCAtXpT51MPtUMWWY59eQY3FZHZwWqBdyOwlpCJgXCUGN43MHiwdq94zc89XKWcAJKUVfTZZrVv8XOAswNUzhJ6o3xA9uUTobXhxcb-BParoOc4AegNH0vpr4awyhkDKHbipP_84nM',
+      Authorization: 'Bearer BQDN51tve92GpH7DHCrnO924ottUwa2WRIQxBqNsoqqNqt21lY20tszpDHgzk0x1JWTRlUk2oPYYOxQhxk0kLqlqr_S1r_KsFlkhsQl9EQTnOMveO81DW610UrgUrQGVUQFxn3XzTGG69bnNqp0M9DN77utW2x_TlB6T0SHvf4Zg',
     },
   })
     .then(toJSON);
