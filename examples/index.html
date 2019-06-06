@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify</title>
+</head>
+
+<body>
+  <div class="albums"></div>
+  <script src="../dist/spotify-wrapper.umd.js"></script>
+
+  <script>
+    const albums = spotifyWrapper.searchAlbuns('Eminem');
+
+    const $albums = document.querySelector('.albums');
+
+    let ids = {};
+    albums.then(data => {
+      let markup = data.albums.items.map(item => {
+        ids[item.id] = { id: item.id }
+        return `<img src='${item.images[1].url}' alt='${item.name}'/>`
+      }).join('')
+
+      console.log(data, ids)
+      $albums.innerHTML = markup
+    })
+  </script>
+</body>
+
+</html>
